@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="details.js" defer></script>
+</head>
+<body>
+  <main>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="back-button">
+          <img src="back-to-home.svg" alt="Back to Home" />
+        </a>
+        <h1 id="pokemonName" class="pokemon-name"></h1>
+        <p id="pokemonID" class="pokemon-id"></p>
+      </div>
+    </header>
+
+    <!-- Featured Image & Navigation Arrows -->
+    <section class="pokemon-image-section">
+      <a href="#" id="prevPokemon" class="arrow-button">
+        <img src="chevron_left.svg" alt="Previous Pokémon" />
+      </a>
+
+      <div class="pokemon-image-container">
+        <img id="pokemonImage" src="" alt="Pokémon Image" />
+      </div>
+
+      <a href="#" id="nextPokemon" class="arrow-button">
+        <img src="chevron_right.svg" alt="Next Pokémon" />
+      </a>
+    </section>
+
+    <!-- Pokémon Details -->
+    <section class="pokemon-details">
+      <div class="types">
+        <span id="type1" class="type-label"></span>
+        <span id="type2" class="type-label"></span>
+      </div>
+
+      <h2 class="section-title">About</h2>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <img src="weight.svg" alt="Weight" />
+          <p id="pokemonWeight" class="info-value"></p>
+          <p class="info-label">Weight</p>
+        </div>
+
+        <div class="info-card">
+          <img src="height.svg" alt="Height" />
+          <p id="pokemonHeight" class="info-value"></p>
+          <p class="info-label">Height</p>
+        </div>
+
+        <div class="info-card">
+          <div id="pokemonMoves" class="info-value"></div>
+          <p class="info-label">Move</p>
+        </div>
+      </div>
+
+      <p id="pokemonDescription" class="description-text"></p>
+
+      <h2 class="section-title">Base Stats</h2>
+
+      <div class="stats-section">
+        <div class="stat-bar" data-stat="hp">
+          <p class="stat-label">HP</p>
+          <p class="stat-value" id="statHP"></p>
+          <progress id="progressHP" max="100" value="0"></progress>
+        </div>
+
+        <div class="stat-bar" data-stat="attack">
+          <p class="stat-label">ATK</p>
+          <p class="stat-value" id="statATK"></p>
+          <progress id="progressATK" max="100" value="0"></progress>
+        </div>
+
+        <div class="stat-bar" data-stat="defense">
+          <p class="stat-label">DEF</p>
+          <p class="stat-value" id="statDEF"></p>
+          <progress id="progressDEF" max="100" value="0"></progress>
+        </div>
+
+        <div class="stat-bar" data-stat="specialAttack">
+          <p class="stat-label">SP ATK</p>
+          <p class="stat-value" id="statSATK"></p>
+          <progress id="progressSATK" max="100" value="0"></progress>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative background image -->
+    <img src="pokedex.svg" alt="Pokédex Background" class="background-image" />
+  </main>
+</body>
+</html>

@@ -24,7 +24,7 @@ body:hover {
   transition: background-color 0.3s ease-in-out;
 }
 
-
+  
 main {
   position: relative;
 }
@@ -77,13 +77,13 @@ main {
   width: 100px;
   height: 100px;
   margin: 10px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .pokemon-image img:hover {
-  transform: scale(1.25);
+  transform: scale(1.25) rotate(1deg); /* Slight rotation for natural feel */
+  opacity: 0.9; /* Subtle fade effect */
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -118,8 +118,9 @@ main {
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-  transition: transform 0.5s ease, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 
 .pokemon-image-section :hover {
   transform: scale(1.01);
@@ -137,8 +138,27 @@ main {
 .arrow-button:hover {
   transform: scale(1.2);
 }
+.pokemon-name {
+  flex-grow: 1; /* Ensures it takes up available space */
+  text-align: center; /* Centers text */
+  font-size: var(--headline-font-size);
+  font-weight: var(--font-weight-bold);
+  transition: color 0.5s ease-in-out, transform 0.3s ease-in-out;
 
+}
+#pokemonName:hover {
+  color: var(--grayscale-dark); /* Changes to red */
+  transform: scale(1.1); 
+}
 
+.back-button img {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.back-button:hover img {
+  transform: scale(1.2) rotate(-5deg);
+  opacity: 0.8; /* Soft fade */
+}
 
 .types {
   display: flex;
@@ -348,4 +368,22 @@ progress::-webkit-progress-value {
 .icon:hover {
   filter: brightness(0) invert(0) sepia(1) hue-rotate(-50deg) saturate(500%);
   transform: scale(1.15);
+}
+#pokemonImage {
+  width: 120px;
+  height: auto;
+  margin: 10px;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+#pokemonImage:hover {
+  transform: scale(1.2) rotate(1deg); /* Adds a natural motion */
+  opacity: 0.9; /* Soft fade for smoothness */
+}
+#pokemonName {
+  text-align: center; /* Centers the name */
+  display: block;
+  font-size: var(--headline-font-size); /* Keeps it proportional */
+  font-weight: var(--font-weight-bold);
+  margin-top: 10px; /* Adjust spacing */
 }

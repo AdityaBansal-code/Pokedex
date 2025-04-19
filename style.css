@@ -68,7 +68,7 @@ main {
   font-family: 'PokemonSolid', sans-serif;
   font-size: 40px;
   color: #ffcb05;
-  text-shadow: -3px 3px 0 #3b4cca;
+  text-shadow: -2px 2px 0 #3b4cca;
 }
 .container2 {
   display: flex;
@@ -440,4 +440,13 @@ progress::-webkit-progress-value {
   .search-box {
     width: 100%;
   }
+}
+#pokemonImage {
+  width: 120px;
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+#pokemonImage:hover {
+  transform: scale(1.2) rotate(1deg);
+  opacity: 0.9;
 }

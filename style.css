@@ -219,8 +219,6 @@ main {
 .arrow-button:hover {
   transform: scale(1.2);
 }
-
-/* Pokémon Name */
 #pokemonName {
   flex-grow: 1;
   text-align: center;

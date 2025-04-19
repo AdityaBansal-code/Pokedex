@@ -61,6 +61,17 @@ searchInput.addEventListener("keyup", () => {
   notFoundMessage.style.display = filteredList.length === 0 ? "block" : "none";
 });
 
+const clearSearch = document.getElementById("clearSearch");
+
+searchInput.addEventListener("input", () => {
+    clearSearch.style.display = searchInput.value.length ? "block" : "none";
+});
+
+clearSearch.addEventListener("click", () => {
+    searchInput.value = "";
+    clearSearch.style.display = "none";
+});
+
 // Clear the search box
 clearSearchButton.addEventListener("click", () => {
   searchInput.value = "";

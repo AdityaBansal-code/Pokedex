@@ -27,6 +27,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   background-color: var(--identity-primary);
+  transition: background-color 0.3s ease-in-out;
 }
 
 img {
@@ -190,6 +191,7 @@ main {
   padding: 24px;
   box-shadow: var(--drop-shadow);
   transition: box-shadow 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .pokemon-details:hover {
   box-shadow: var(--drop-shadow);
@@ -449,4 +451,7 @@ progress::-webkit-progress-value {
 #pokemonImage:hover {
   transform: scale(1.2) rotate(1deg);
   opacity: 0.9;
+}
+.pokemon-list-item:hover {
+  cursor: pointer; /* Changes the cursor to a pointer */
 }

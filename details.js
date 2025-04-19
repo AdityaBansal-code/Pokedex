@@ -85,6 +85,7 @@ function setTypeBackgroundColor(mainType) {
   }
 
   document.querySelector("main").style.backgroundColor = color;
+  document.querySelector("main").style.transition="all 0.3s" 
 }
 
 function displayPokemonDetails(pokemon) {
@@ -153,4 +154,29 @@ function displayPokemonDetails(pokemon) {
       document.getElementById(progressMap[statName]).value = base_stat;
     }
   });
+}
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.style.opacity = "0";
+  setTimeout(() => {
+    document.body.style.opacity = "1";
+    document.body.style.transition = "opacity 0.5s ease-in-out";
+  }, 100);
+});
+function updatePokemonDetails(newPokemonData) {
+  let details = document.querySelector(".pokemon-details");
+
+  // Fade out current Pokémon
+  details.style.opacity = "0";
+  details.style.transform = "scale(0.95)"; // Optional: Shrink slightly
+
+  setTimeout(() => {
+    // Update Pokémon details without removing the element itself
+    document.getElementById("pokemonName").textContent = newPokemonData.name;
+    document.getElementById("pokemonImage").src = newPokemonData.imageUrl;
+    document.getElementById("pokemonType").textContent = newPokemonData.type;
+
+    // Fade in the new Pokémon smoothly
+    details.style.opacity = "1";
+    details.style.transform = "scale(1)";
+  }, 500); // Ensures smooth transition
 }

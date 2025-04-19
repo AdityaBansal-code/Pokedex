@@ -70,9 +70,9 @@ clearSearchButton.addEventListener("click", () => {
 document.querySelectorAll(".pokemon-list-item").forEach(item => {
   item.addEventListener("click", function() {
     document.body.style.opacity = "0";
-    document.body.style.transition = "opacity 0.5s ease-in-out";
+    document.body.style.transition = "opacity 0.3s ease-in-out";
     setTimeout(() => {
       window.location.href = "details.html"; // Smooth transition to details page
-    }, 500);
+    }, 300);
   });
 });

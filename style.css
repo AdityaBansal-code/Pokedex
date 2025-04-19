@@ -144,6 +144,7 @@ main {
   transform: scale(1.15);
 }
 
+
 /* Pokémon List */
 .pokemon-list {
   display: grid;
@@ -152,12 +153,7 @@ main {
   justify-content: center;
   padding: 20px;
 }
-@media (max-width: 480px) {
-  .pokemon-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-}
+
 .pokemon-list-item {
   border: 2px solid black;
   text-align: center;
@@ -413,7 +409,15 @@ progress::-webkit-progress-value {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
+@media (max-width: 480px) {
+  .pokemon-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .search-box {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .pokemon-list {
     grid-template-columns: repeat(2, 1fr);
@@ -430,6 +434,15 @@ progress::-webkit-progress-value {
   .background-image {
     width: 25vw;
   }
+  .pokemon-list-item {
+    padding: 12px;
+    gap: 12px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+
 }
 @media (max-width: 450px) {
   .background-image {
@@ -437,17 +450,8 @@ progress::-webkit-progress-value {
     opacity: 0.08; /* Reduce opacity for subtle effect */
   }
 }
-@media (max-width: 600px) {
-  .pokemon-list-item {
-    padding: 12px;
-    gap: 12px;
-  }
-}
-@media (max-width: 480px) {
-  .search-box {
-    width: 100%;
-  }
-}
+
+
 #pokemonImage {
   width: 120px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;

@@ -159,6 +159,6 @@ document.addEventListener("DOMContentLoaded", function() {
   document.body.style.opacity = "0";
   setTimeout(() => {
     document.body.style.opacity = "1";
-    document.body.style.transition = "opacity 0.3s ease-in-out";
+    document.body.style.transition = "opacity 0.4s ease-in-out";
   }, 100);
 });

@@ -457,3 +457,6 @@ progress::-webkit-progress-value {
   transform: scale(1.2) rotate(1deg);
   opacity: 0.8;
 }
+#clearSearch {
+  display: none; /* Hide initially */
+}

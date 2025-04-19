@@ -63,15 +63,19 @@ searchInput.addEventListener("keyup", () => {
 
 const clearSearch = document.getElementById("clearSearch");
 
+// Ensure cross icon appears/disappears dynamically
 searchInput.addEventListener("input", () => {
-    clearSearch.style.display = searchInput.value.length ? "block" : "none";
+    clearSearch.style.display = searchInput.value.length > 0 ? "block" : "none";
 });
 
+// When the cross icon is clicked, clear the input and restore full Pokémon list
 clearSearch.addEventListener("click", () => {
     searchInput.value = "";
     clearSearch.style.display = "none";
+    searchInput.focus(); // Keeps cursor in the input field after clearing
+    showPokemonList(allPokemons); // Restore full list
+    notFoundMessage.style.display = "none";
 });
-
 // Clear the search box
 clearSearchButton.addEventListener("click", () => {
   searchInput.value = "";

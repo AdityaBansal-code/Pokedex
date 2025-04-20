@@ -31,7 +31,7 @@ function showPokemonList(pokemonArray) {
       <div class="pokemon-image">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg" alt="${pokemon.name}" />
       </div>
-      <div class="pokemon-name"><p>${pokemon.name}</p></div>
+      <div class="pokemon-name"><p>${capitalizeFirstLetter(pokemon.name)}</p></div>
     `;
 
     card.addEventListener("click", () => {
@@ -40,6 +40,11 @@ function showPokemonList(pokemonArray) {
 
     pokemonListContainer.appendChild(card);
   });
+}
+
+// Helper function to capitalize only the first letter
+function capitalizeFirstLetter(name) {
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 }
 
 // Get ID from Pokémon API URL
